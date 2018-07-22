@@ -1,0 +1,15 @@
+.icon-spinner {
+	animation: spin 1s ease infinite;
+	color: $color-accent;
+	display: block;
+	height: rem(50);
+	margin: rem(100) auto 0;
+	width: rem(50);
+}
+
+@keyframes spin {
+
+	to {
+		transform: rotate(360deg);
+	}
+}

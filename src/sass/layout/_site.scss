@@ -1,12 +1,31 @@
+body {
+	overflow-x: hidden;
+}
+
 .site {
 	margin: 0 auto;
 	max-width: 100%;
-	padding: $sp-single;
-	width: $site-width;
+	padding: 0 $sp-double * 2 0 $sp-double;
+	width: $content-width;
+
+	@include mq-min($tablet-landscape) {
+		padding: 0 5rem 0 4rem;
+	}
+
+	@include mq-min($desktop) {
+		padding: 0 $sp-double;
+	}
 }
 
 .site-content {
 	margin: 0 auto;
 	max-width: 100%;
 	width: $content-width;
+}
+
+.blog {
+
+	.site-content {
+		margin-top: $sp-triple;
+	}
 }

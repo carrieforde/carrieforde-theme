@@ -1,0 +1,12 @@
+.term {
+	border: 1px solid;
+	border-radius: 3px;
+	display: inline-block;
+	font-size: rem(14);
+	padding: 0.25em 0.5em;
+
+	& + & {
+		margin-left: $sp-half;
+		margin-top: $sp-half;
+	}
+}
