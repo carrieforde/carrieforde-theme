@@ -1,9 +1,11 @@
 .post-navigation,
-.posts-navigation {
+.posts-navigation,
+.pagination {
 	margin-top: $sp-double;
 	padding: $sp-single 0;
 }
 
+.pagination,
 .nav-links {
 	display: flex;
 }

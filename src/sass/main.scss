@@ -27,10 +27,17 @@
 @import "module/footer-credits";
 @import "module/site-title";
 @import "module/comments";
+@import "module/portfolio-link";
+@import "module/post";
+@import "module/project";
+@import "module/spinner";
+@import "module/term";
+@import "module/custom-logo";
 
 // Layout
 @import "layout/site";
 @import "layout/site-header";
+@import "layout/footer/site-footer";
 @import "layout/footer/has-footer-widgets";
 @import "layout/footer/footer-widget-areas-2";
 @import "layout/footer/footer-widget-areas-3";
