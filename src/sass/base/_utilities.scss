@@ -2,3 +2,17 @@
 
 	@include screen-reader-text;
 }
+
+.full-width {
+
+	@include full-width;
+
+	// Compensate for uneven horizontal padding.
+	margin-right: calc(-50vw + #{$sp-half});
+	width: calc(100vw + #{$sp-single});
+
+	@include mq-min($desktop) {
+		margin-right: -50vw;
+		width: 100vw;
+	}
+}

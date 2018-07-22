@@ -1,5 +1,8 @@
 html {
-	font-size: $base-font-size * 1px;
+
+	@include mq-min($tablet-landscape) {
+		font-size: $base-font-size * 1px;
+	}
 }
 
 body,
@@ -16,6 +19,54 @@ textarea {
 	word-wrap: break-word;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 1.2;
+	margin: 0;
+}
+
+h1,
+.h1 {
+	font-size: em(36);
+}
+
+h2,
+.h2 {
+	font-size: em(30);
+}
+
+h3,
+.h3 {
+	font-size: em(24);
+}
+
+h4,
+.h4 {
+	font-size: em(20);
+}
+
+h5,
+.h5 {
+	font-size: em(18);
+}
+
+h6,
+.h6 {
+	font-size: em(15);
+}
+
+p {
+	margin: 0 0 1.5em;
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
 code,
 kbd,
 pre,
@@ -26,18 +77,46 @@ var {
 }
 
 pre {
+	border: 1px solid $jumbo;
 	overflow-x: scroll;
+	padding: $sp-single;
+}
+
+p,
+pre {
+
+	+ h2,
+	+ h3,
+	+ h4,
+	+ h5,
+	+ h6 {
+		margin: $sp-triple 0 $sp-half;
+	}
 }
 
 a {
-	color: $link;
-	transition: color 0.3s ease-in-out;
 
-	&:visited {
-		color: $link-visited;
+	@include link($color-primary, $color-primary);
+
+	border-bottom: 2px solid currentColor;
+	display: inline-block;
+	position: relative;
+	text-decoration: none;
+	transition: $transition-color;
+
+	&:after {
+		border-bottom: 2px solid $color-accent;
+		content: "";
+		display: block;
+		position: absolute;
+		transition: width 0.3s ease-in-out;
+		width: 0;
 	}
 
 	&:hover {
-		color: $link-hover;
+
+		&:after {
+			width: 100%;
+		}
 	}
 }

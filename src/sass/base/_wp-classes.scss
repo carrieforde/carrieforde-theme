@@ -35,6 +35,16 @@
 	width: 100%;
 }
 
+.wp-caption {
+	margin: 0 0 $sp-single 0;
+	max-width: 100%;
+
+	&-text {
+		font-size: 0.875rem;
+		margin-top: $sp-half;
+	}
+}
+
 // Editor color palette classes.
 @each $name, $color in $editor-palette {
 
