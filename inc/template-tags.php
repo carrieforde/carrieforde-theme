@@ -360,8 +360,6 @@ function alcatraz_the_social_icons_menu() {
 			'theme_location' => 'social',
 			'menu_class'     => 'menu social-links-menu',
 			'depth'          => 1,
-			'link_before'    => '<span class="screen-reader-text">',
-			'link_after'     => '</span>',
 		) );
 		?>
 	</nav>

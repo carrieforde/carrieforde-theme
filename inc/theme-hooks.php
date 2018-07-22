@@ -159,6 +159,14 @@ function alcatraz_output_footer_credits() {
 	}
 }
 
+add_action( 'alcatraz_after_header_inside', 'alcatraz_social_menu_in_header' );
+/**
+ * Output the social nav menu.
+ */
+function alcatraz_social_menu_in_header() {
+	alcatraz_the_social_icons_menu();
+}
+
 add_action( 'alcatraz_footer', 'alcatraz_social_menu_in_footer', 80 );
 /**
  * Output the social nav menu.

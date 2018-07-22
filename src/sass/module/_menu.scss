@@ -12,6 +12,8 @@
 	}
 
 	a {
+
+		@include link($color-primary, $color-accent);
 		padding: 0.5em;
 	}
 }

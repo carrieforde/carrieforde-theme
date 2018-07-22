@@ -98,25 +98,28 @@ a {
 
 	@include link($color-primary, $color-primary);
 
-	border-bottom: 2px solid currentColor;
 	display: inline-block;
 	position: relative;
 	text-decoration: none;
 	transition: $transition-color;
 
-	&:after {
-		border-bottom: 2px solid $color-accent;
-		content: "";
-		display: block;
-		position: absolute;
-		transition: width 0.3s ease-in-out;
-		width: 0;
-	}
-
-	&:hover {
+	.hentry & {
+		border-bottom: 2px solid currentColor;
 
 		&:after {
-			width: 100%;
+			border-bottom: 2px solid $color-accent;
+			content: "";
+			display: block;
+			position: absolute;
+			transition: width 0.3s ease-in-out;
+			width: 0;
+		}
+
+		&:hover {
+
+			&:after {
+				width: 100%;
+			}
 		}
 	}
 }
