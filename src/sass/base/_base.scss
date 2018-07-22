@@ -103,7 +103,7 @@ a {
 	text-decoration: none;
 	transition: $transition-color;
 
-	.hentry &:not(.project-link) {
+	.hentry &:not(.project-link):not(.term--post_tag):not(.posted-on__link):not(.entry-title__link) {
 		border-bottom: 2px solid currentColor;
 
 		&:after {

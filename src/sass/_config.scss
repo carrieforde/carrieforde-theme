@@ -134,10 +134,10 @@ $sp-triple: 3rem;
 ///
 /// @type Number
 /// @link https://medium.freecodecamp.com/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862#.or3duno2h
-$tablet-portrait: rem(600);
-$tablet-landscape: rem(900);
-$desktop: rem(1200);
-$desktop-xl: rem(1800);
+$tablet-portrait: 600px;
+$tablet-landscape: 900px;
+$desktop: 1200px;
+$desktop-xl: 1800px;
 
 // ====================================
 // Z-INDEX

@@ -6,7 +6,7 @@ body {
 	margin: 0 auto;
 	max-width: 100%;
 	padding: 0 $sp-double * 2 0 $sp-double;
-	width: $content-width;
+	width: $site-width;
 
 	@include mq-min($tablet-landscape) {
 		padding: 0 5rem 0 4rem;
