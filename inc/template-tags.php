@@ -138,9 +138,13 @@ function alcatraz_entry_title( $post_id = 0 ) {
 		$post_id = get_the_ID();
 	}
 
-	$title = '';
+	$title      = '';
+	$hide_title = get_post_meta( $post_id, 'hide_title', true );
 
-	if ( is_singular() ) {
+	if ( is_singular() && 'yes' === $hide_title[0] ) {
+
+		$title = '<h1 class="entry-title screen-reader-text">' . get_the_title( $post_id ) . '</h1>';
+	} elseif ( is_singular() ) {
 
 		$title = '<h1 class="entry-title">' . get_the_title( $post_id ) . '</h1>';
 	} else {
