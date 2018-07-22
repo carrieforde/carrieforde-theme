@@ -93,24 +93,29 @@ if ( ! function_exists( 'alcatraz_setup' ) ) :
 		// Add support for editor color palette.
 		add_theme_support( 'editor-color-palette',
 			array(
-				'name'  => __( 'Bay of Many', 'alcatraz' ),
-				'slug'  => 'bay-of-many',
-				'color' => '#1f4483',
+				'name'  => __( 'Marjorelle Blue', 'alcatraz' ),
+				'slug'  => 'marjorelle-blue',
+				'color' => '#7341f1',
 			),
 			array(
-				'name'  => __( 'Puerto Rico', 'alcatraz' ),
-				'slug'  => 'puerto-rico',
-				'color' => '#58b7a1',
+				'name'  => __( 'Shamrock', 'alcatraz' ),
+				'slug'  => 'shamrock',
+				'color' => '#55ee9e',
 			),
 			array(
-				'name'  => __( 'Mine Shaft', 'alcatraz' ),
-				'slug'  => 'mine-shaft',
-				'color' => '#363a42',
+				'name'  => __( 'Black Russian', 'alcatraz' ),
+				'slug'  => 'black-russian',
+				'color' => '#252428',
 			),
 			array(
-				'name'  => __( 'Raven', 'alcatraz' ),
-				'slug'  => 'raven',
-				'color' => '#73767b',
+				'name'  => __( 'Gun Powder', 'alcatraz' ),
+				'slug'  => 'gun-powder',
+				'color' => '#4b4950',
+			),
+			array(
+				'name'  => __( 'Gray Suit', 'alcatraz' ),
+				'slug'  => 'gray-suit',
+				'color' => '#97949e',
 			),
 			array(
 				'name'  => __( 'White', 'alcatraz' ),
@@ -168,6 +173,14 @@ function alcatraz_scripts() {
 		);
 	}
 
+	// Google fonts.
+	wp_enqueue_style(
+		'alcatraz-fonts',
+		str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Inconsolata|Karla' ),
+		array(),
+		ALCATRAZ_VERSION
+	);
+
 	// Main theme CSS.
 	wp_register_style(
 		'alcatraz-style',
@@ -215,6 +228,14 @@ add_action( 'enqueue_block_editor_assets', 'alcatraz_block_editor_styles' );
  * Enqueue block editor styles.
  */
 function alcatraz_block_editor_styles() {
+
+	// Google fonts.
+	wp_enqueue_style(
+		'carrieforde-fonts',
+		str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Inconsolata|Karla' ),
+		array(),
+		ALCATRAZ_VERSION
+	);
 
 	// Admin styles.
 	wp_enqueue_style(

@@ -99,7 +99,7 @@ const config = {
     new BrowserSyncPlugin({
       files: '**/*.php',
       injectChanges: true,
-      proxy: 'https://alcatraz.test'
+      proxy: 'https://carrieforde.test'
     })
   ]
 };
