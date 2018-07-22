@@ -30,7 +30,7 @@ get_header(); ?>
 
 				// Get the template based on the post type from a child theme if it's there,
 				// otherwise use ours.
-				get_template_part( 'template-parts/content', get_post_type() );
+				get_template_part( 'template-parts/content', 'excerpt' );
 
 			endwhile;
 			?>
