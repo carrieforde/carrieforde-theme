@@ -35,6 +35,12 @@
 @import "module/custom-logo";
 @import "module/has-transparent-header";
 
+// Blocks
+@import "module/blocks/wp-block-separator";
+@import "module/blocks/wp-block-carrieforde-blocks";
+@import "module/blocks/wp-block-carrieforde-blocks-grid-list";
+@import "module/blocks/wp-block-carrieforde-blocks-hero-heading";
+
 // Layout
 @import "layout/site";
 @import "layout/site-header";

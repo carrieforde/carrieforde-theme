@@ -6,6 +6,9 @@
 import './sass/main';
 
 // Import front end scripts.
-// import '../vendor/jquery-mobile/jquery.mobile.custom';
 import './scripts/skip-link-focus-fix';
 import './scripts/init';
+import { linkColor } from './scripts/link-color';
+
+window.addEventListener('scroll', linkColor);
+document.addEventListener('DOMContentLoaded', linkColor);
