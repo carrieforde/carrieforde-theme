@@ -89,7 +89,18 @@ add_action( 'alcatraz_header', 'alcatraz_output_logo', 5 );
  */
 function alcatraz_output_logo() {
 
+	$alt_logo = get_post_meta( get_the_id(), 'alternate_logo', true );
+
 	if ( ! has_custom_logo() ) {
+		return;
+	}
+
+	if ( 'yes' === $alt_logo[0] ) {
+
+		$logo = get_theme_mod( 'alt_logo_id', '' );
+
+		echo '<a href="' . esc_url( home_url( '/' ) ) . '" class="custom-logo-link">' . wp_get_attachment_image( $logo, 'full', '', array( 'class' => 'custom-logo' ) ) . '</a>';
+
 		return;
 	}
 
@@ -130,15 +141,8 @@ function alcatraz_output_default_entry_footer( $post_id = 0 ) {
 
 	alcatraz_the_edit_post_link( $post_id );
 
-	$footer_taxonomies = array(
-		'category' => __( 'Posted in: ', 'alcatraz' ),
-		'post_tag' => __( 'Tagged: ', 'alcatraz' ),
-	);
-	$footer_taxonomies = apply_filters( 'alcatraz_entry_footer_taxonomies', $footer_taxonomies, $post_id );
-
-	foreach ( $footer_taxonomies as $footer_taxonomy => $label ) {
-		alcatraz_the_taxonomy_term_list( $post_id, $footer_taxonomy, $label, ', ' );
-	}
+	alcatraz_the_taxonomy_term_list( $post_id, 'category', 'Posted in ', ', ' );
+	alcatraz_the_taxonomy_term_list( $post_id, 'post_tag', '', '' );
 }
 
 add_action( 'alcatraz_footer', 'alcatraz_output_footer_credits', 30 );

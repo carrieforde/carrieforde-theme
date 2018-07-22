@@ -76,6 +76,24 @@ function alcatraz_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Alterate logo.
+	$wp_customize->add_setting(
+		'alt_logo_id',
+		array(
+			'default'    => '',
+			'type'       => 'theme_mod',
+			'capability' => 'edit_theme_options',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Media_Control( $wp_customize, 'alt_logo_id',
+			array(
+				'label'   => __( 'Alternate Logo', 'alcatraz' ),
+				'section' => 'title_tagline',
+			)
+		)
+	);
+
 	/* Footer */
 
 	// Number of footer widget areas.

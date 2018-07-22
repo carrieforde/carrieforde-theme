@@ -1,0 +1,7 @@
+.has-transparent-header {
+	$header-height: rem(-50) + $sp-double * -2;
+
+	.site-content {
+		margin-top: $header-height;
+	}
+}

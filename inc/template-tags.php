@@ -20,33 +20,14 @@ function alcatraz_posted_on( $post_id = 0 ) {
 		$post_id = get_the_ID();
 	}
 
-	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-	if ( get_the_time( 'U', $post_id ) !== get_post_modified_time( 'U', false, $post_id ) ) {
-		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
-	}
+	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
 
 	$time_string = sprintf( $time_string,
-		esc_attr( get_the_date( 'c', $post_id ) ),
-		esc_html( get_the_date( '', $post_id ) ),
-		esc_attr( get_post_modified_time( 'c', false, $post_id ) ),
-		esc_html( get_post_modified_time( '', false, $post_id ) )
+		esc_attr( get_the_date( DATE_W3C ) ),
+		esc_html( get_the_date() )
 	);
 
-	$posted_on = sprintf(
-		/* translators: %s: posted date */
-		esc_html_x( 'Posted on %s', 'post date', 'alcatraz' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-	);
-
-	$author_id = get_post_field( 'post_author', $post_id );
-
-	$byline = sprintf(
-		/* translators: %s: the post author */
-		esc_html_x( 'by %s', 'post author', 'alcatraz' ),
-		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( $author_id ) ) . '">' . esc_html( get_the_author_meta( 'display_name', $author_id ) ) . '</a></span>'
-	);
-
-	$output = '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+	$output = '<span class="posted-on"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark" class="posted-on__link">' . $time_string . '</a></span>';
 
 	return apply_filters( 'alcatraz_posted_on', $output, $post_id, $author_id );
 }
@@ -161,11 +142,11 @@ function alcatraz_entry_title( $post_id = 0 ) {
 
 	if ( is_singular() ) {
 
-		$title = '<h1 class="entry-title screen-reader-text">' . get_the_title( $post_id ) . '</h1>';
+		$title = '<h1 class="entry-title">' . get_the_title( $post_id ) . '</h1>';
 	} else {
 
 		$title = sprintf(
-			'<h2 class="entry-title"><a href="%s" rel="bookmark">%s</a></h2>',
+			'<h2 class="entry-title"><a href="%s" rel="bookmark" class="entry-title__link">%s</a></h2>',
 			esc_url( get_permalink( $post_id ) ),
 			get_the_title( $post_id )
 		);
@@ -311,9 +292,10 @@ function alcatraz_get_taxonomy_term_list( $post_id = 0, $taxonomy = '', $label =
 
 	foreach ( $terms as $term_slug => $term_obj ) {
 		$output .= sprintf(
-			'<a href="%s" rel="%s %s">%s</a>',
+			'<a href="%s" rel="%s %s" class="term term--%s">%s</a>',
 			get_term_link( $term_obj->term_id ),
 			esc_attr( $term_obj->slug ),
+			esc_attr( $term_obj->taxonomy ),
 			esc_attr( $term_obj->taxonomy ),
 			esc_html( $term_obj->name )
 		);
@@ -360,6 +342,7 @@ function alcatraz_the_social_icons_menu() {
 			'theme_location' => 'social',
 			'menu_class'     => 'menu social-links-menu',
 			'depth'          => 1,
+			'container'      => '',
 		) );
 		?>
 	</nav>

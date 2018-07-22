@@ -18,7 +18,8 @@ add_filter( 'body_class', 'alcatraz_body_classes' );
  */
 function alcatraz_body_classes( $classes ) {
 
-	$footer_widgets = get_theme_mod( 'footer_widget_areas', 3 );
+	$footer_widgets     = get_theme_mod( 'footer_widget_areas', 3 );
+	$transparent_header = get_post_meta( get_the_id(), 'transparent_header', true );
 
 	// Header image class.
 	if ( get_header_image() ) {
@@ -28,6 +29,11 @@ function alcatraz_body_classes( $classes ) {
 	// Custom logo class.
 	if ( has_custom_logo() ) {
 		$classes[] = 'has-logo';
+	}
+
+	// Transparent header class.
+	if ( ! empty( $transparent_header ) ) {
+		$classes[] = 'has-transparent-header';
 	}
 
 	// Footer widget areas class.
