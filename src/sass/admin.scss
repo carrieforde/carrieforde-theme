@@ -11,6 +11,9 @@
 @import "admin/base";
 @import "base/wp-classes";
 
+// Modules
+@import "module/section-title";
+
 // Block styles
 @import "module/blocks/wp-block-separator";
 @import "module/blocks/wp-block-carrieforde-blocks";
