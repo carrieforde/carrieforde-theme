@@ -53,23 +53,8 @@
 		display: block;
 	}
 
-	.tags-links {
+	.post_tag-tax-term-list {
 		margin-top: $sp-single;
-
-		a {
-
-			@extend .term;
-
-			transition: border-color 0.3s ease-in-out;
-
-			&:hover {
-				border-color: $color-accent;
-
-				&:after {
-					content: none;
-				}
-			}
-		}
 	}
 }
 

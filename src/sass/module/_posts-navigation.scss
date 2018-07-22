@@ -10,13 +10,64 @@
 	display: flex;
 }
 
+.nav-links {
+
+	a {
+		align-items: center;
+		display: flex;
+		font-size: 1.25rem;
+		font-weight: 700;
+		line-height: 1.3;
+
+		&:after,
+		&:before {
+			transition: $transition-color, $transition-transform;
+		}
+	}
+}
+
 .nav-previous,
 .nav-next {
 	flex: 0 0 50%;
-	overflow: hidden; // keeps long works from breaking out of container.
 }
 
 .nav-next {
 	margin-left: auto;
 	text-align: right;
+
+	a {
+		justify-content: flex-end;
+
+		&:after {
+			content: "\2192";
+			margin-left: $sp-half;
+		}
+
+		&:hover {
+
+			&:after {
+				color: $color-accent;
+				transform: translateX($sp-single);
+			}
+		}
+	}
+}
+
+.nav-previous {
+
+	a {
+
+		&:before {
+			content: "\2190";
+			margin-right: $sp-half;
+		}
+
+		&:hover {
+
+			&:before {
+				color: $color-accent;
+				transform: translateX($sp-single * -1);
+			}
+		}
+	}
 }
