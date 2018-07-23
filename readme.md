@@ -9,7 +9,7 @@
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
-Alcatraz is a theme designed and developed with the WordPress theme developer in mind. Use Alcatraz as a starter theme, or use it in conjunction with [alcatraz-child](https://github.com/carrieforde/alcatraz-child) to quickly spin up a custom theme.
+Alcatraz is a theme designed and developed with the WordPress theme developer in mind. Use Alcatraz as a starter theme, or use it in conjunction with [carrieforde-child](https://github.com/carrieforde/carrieforde-child) to quickly spin up a custom theme.
 
 ## Description
 
@@ -48,7 +48,7 @@ Because Alcatraz is meant as a developer's theme, a basic grasp of the command l
 To get started, clone this repo to your computer:  
 
 ```sh
-git clone https://github.com/carrieforde/Alcatraz.git alcatraz
+git clone https://github.com/carrieforde/Alcatraz.git carrieforde
 ```
 
 Once you have cloned the project, move into the project folder, and install the Node dependencies:
@@ -67,12 +67,12 @@ Finally, after running `npm install`, you'll need to tell Webpack about your loc
 ### Using Alcatraz as a starter theme
 If you want to use `Alcatraz` as a starter theme, you'll likely want to replace all instances of `Alcatraz` with the name of your new theme. You'll need to do a six-step find and replace to capture all instances of `alcatraz` throughout the theme:  
 
-1. Search for `'ALCATRAZ_'` (capitalization matters!) to capture the theme constants.
-1. Search for `'alcatraz'` (inside single quotations) to capture the text domain.
-1. Search for `alcatraz_` to capture all the function names.
-1. Search for `Text Domain: alcatraz` in style.css.
-1. Search for ` alcatraz` (with a space before it) to capture DocBlocks.
-1. Search for `alcatraz-` to capture prefixed handles.
+1. Search for `CARRIEFORDE_` (capitalization matters!) to capture the theme constants.
+1. Search for `'carrieforde'` (inside single quotations) to capture the text domain.
+1. Search for `carrieforde_` to capture all the function names.
+1. Search for `Text Domain: carrieforde` in style.css.
+1. Search for ` carrieforde` (with a space before it) to capture DocBlocks.
+1. Search for `carrieforde-` to capture prefixed handles.
 
 
 ## NPM Scripts

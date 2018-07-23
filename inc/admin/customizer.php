@@ -2,10 +2,10 @@
 /**
  * Alcatraz Customizer functionality.
  *
- * @package alcatraz
+ * @package carrieforde
  */
 
-add_action( 'customize_register', 'alcatraz_customize_register' );
+add_action( 'customize_register', 'carrieforde_customize_register' );
 /**
  * Modify the $wp_customize object.
  *
@@ -13,13 +13,13 @@ add_action( 'customize_register', 'alcatraz_customize_register' );
  *
  * @param array $wp_customize The Customizer object.
  */
-function alcatraz_customize_register( $wp_customize ) {
+function carrieforde_customize_register( $wp_customize ) {
 
 	/**
 	 * Include our custom Customizer control types.
 	 */
-	if ( file_exists( ALCATRAZ_PATH . 'vendor/alpha-color-picker/alpha-color-picker.php' ) ) {
-		require_once ALCATRAZ_PATH . 'vendor/alpha-color-picker/alpha-color-picker.php';
+	if ( file_exists( CARRIEFORDE_PATH . 'vendor/alpha-color-picker/alpha-color-picker.php' ) ) {
+		require_once CARRIEFORDE_PATH . 'vendor/alpha-color-picker/alpha-color-picker.php';
 	}
 
 	/**
@@ -34,7 +34,7 @@ function alcatraz_customize_register( $wp_customize ) {
 	$wp_customize->remove_control( 'header_textcolor' );
 
 	// Rename the "Static Front Page" section to "Front Page".
-	$wp_customize->get_section( 'static_front_page' )->title = __( 'Front Page', 'alcatraz' );
+	$wp_customize->get_section( 'static_front_page' )->title = __( 'Front Page', 'carrieforde' );
 
 	/**
 	 * Alcatraz theme sections.
@@ -42,9 +42,9 @@ function alcatraz_customize_register( $wp_customize ) {
 
 	// Footer section.
 	$wp_customize->add_section(
-		'alcatraz_footer_section',
+		'carrieforde_footer_section',
 		array(
-			'title'      => __( 'Footer', 'alcatraz' ),
+			'title'      => __( 'Footer', 'carrieforde' ),
 			'priority'   => 140,
 			'capability' => 'edit_theme_options',
 		)
@@ -63,7 +63,7 @@ function alcatraz_customize_register( $wp_customize ) {
 			'default'           => false,
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'alcatraz_validate_checkbox',
+			'sanitize_callback' => 'carrieforde_validate_checkbox',
 			'transport'         => 'postMessage',
 		)
 	);
@@ -71,7 +71,7 @@ function alcatraz_customize_register( $wp_customize ) {
 		'hide_tagline',
 		array(
 			'type'    => 'checkbox',
-			'label'   => __( 'Hide the site description?', 'alcatraz' ),
+			'label'   => __( 'Hide the site description?', 'carrieforde' ),
 			'section' => 'title_tagline',
 		)
 	);
@@ -88,7 +88,7 @@ function alcatraz_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Media_Control( $wp_customize, 'alt_logo_id',
 			array(
-				'label'   => __( 'Alternate Logo', 'alcatraz' ),
+				'label'   => __( 'Alternate Logo', 'carrieforde' ),
 				'section' => 'title_tagline',
 			)
 		)
@@ -110,14 +110,14 @@ function alcatraz_customize_register( $wp_customize ) {
 		'footer_widget_areas',
 		array(
 			'type'    => 'select',
-			'label'   => __( 'Number of Footer Widget Areas', 'alcatraz' ),
-			'section' => 'alcatraz_footer_section',
+			'label'   => __( 'Number of Footer Widget Areas', 'carrieforde' ),
+			'section' => 'carrieforde_footer_section',
 			'choices' => array(
-				0 => __( 'None', 'alcatraz' ),
-				1 => __( '1', 'alcatraz' ),
-				2 => __( '2', 'alcatraz' ),
-				3 => __( '3', 'alcatraz' ),
-				4 => __( '4', 'alcatraz' ),
+				0 => __( 'None', 'carrieforde' ),
+				1 => __( '1', 'carrieforde' ),
+				2 => __( '2', 'carrieforde' ),
+				3 => __( '3', 'carrieforde' ),
+				4 => __( '4', 'carrieforde' ),
 			),
 		)
 	);
@@ -136,8 +136,8 @@ function alcatraz_customize_register( $wp_customize ) {
 		'footer_credits',
 		array(
 			'type'    => 'textarea',
-			'label'   => __( 'Footer Credits Content', 'alcatraz' ),
-			'section' => 'alcatraz_footer_section',
+			'label'   => __( 'Footer Credits Content', 'carrieforde' ),
+			'section' => 'carrieforde_footer_section',
 		)
 	);
 
@@ -148,31 +148,31 @@ function alcatraz_customize_register( $wp_customize ) {
 			'default'           => false,
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'alcatraz_validate_checkbox',
+			'sanitize_callback' => 'carrieforde_validate_checkbox',
 		)
 	);
 	$wp_customize->add_control(
 		'social_icons_in_footer',
 		array(
 			'type'    => 'checkbox',
-			'label'   => __( 'Show Social Icons in Footer?', 'alcatraz' ),
-			'section' => 'alcatraz_footer_section',
+			'label'   => __( 'Show Social Icons in Footer?', 'carrieforde' ),
+			'section' => 'carrieforde_footer_section',
 		)
 	);
 }
 
-add_action( 'customize_preview_init', 'alcatraz_customize_preview_js' );
+add_action( 'customize_preview_init', 'carrieforde_customize_preview_js' );
 /**
  * Enqueue our customizer JS.
  *
  * @since  1.0.0
  */
-function alcatraz_customize_preview_js() {
+function carrieforde_customize_preview_js() {
 	wp_enqueue_script(
-		'alcatraz_customizer',
-		ALCATRAZ_URL . 'dist/customizer-bundle.js',
+		'carrieforde_customizer',
+		CARRIEFORDE_URL . 'dist/customizer-bundle.js',
 		array( 'customize-preview' ),
-		ALCATRAZ_VERSION,
+		CARRIEFORDE_VERSION,
 		true
 	);
 }

@@ -2,7 +2,7 @@
 /**
  * Template for the Primary Sidebar widget area.
  *
- * @package alcatraz
+ * @package carrieforde
  */
 
-do_action( 'alcatraz_sidebar' );
+do_action( 'carrieforde_sidebar' );

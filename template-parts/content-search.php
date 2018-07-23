@@ -2,21 +2,21 @@
 /**
  * Content template for search results.
  *
- * @package alcatraz
+ * @package carrieforde
  */
 ?>
 
-<?php do_action( 'alcatraz_before_entry' ); ?>
+<?php do_action( 'carrieforde_before_entry' ); ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php alcatraz_the_entry_title(); ?>
+	<?php carrieforde_the_entry_title(); ?>
 
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div>
 
-	<?php alcatraz_the_entry_footer(); ?>
+	<?php carrieforde_the_entry_footer(); ?>
 </article>
 
-<?php do_action( 'alcatraz_after_entry' ); ?>
+<?php do_action( 'carrieforde_after_entry' ); ?>

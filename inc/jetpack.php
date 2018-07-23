@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.me/
  *
- * @package alcatraz
+ * @package carrieforde
  */
 
 /**
@@ -13,23 +13,23 @@
  * See: https://jetpack.me/support/infinite-scroll/
  * See: https://jetpack.me/support/responsive-videos/
  */
-function alcatraz_jetpack_setup() {
+function carrieforde_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
-		'render'    => 'alcatraz_infinite_scroll_render',
+		'render'    => 'carrieforde_infinite_scroll_render',
 		'footer'    => 'page',
 	) );
 
 	// Add theme support for Responsive Videos.
 	add_theme_support( 'jetpack-responsive-videos' );
-} // end function alcatraz_jetpack_setup
-add_action( 'after_setup_theme', 'alcatraz_jetpack_setup' );
+} // end function carrieforde_jetpack_setup
+add_action( 'after_setup_theme', 'carrieforde_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function alcatraz_infinite_scroll_render() {
+function carrieforde_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :
@@ -38,4 +38,4 @@ function alcatraz_infinite_scroll_render() {
 			get_template_part( 'template-parts/content', get_post_format() );
 		endif;
 	}
-} // end function alcatraz_infinite_scroll_render
+} // end function carrieforde_infinite_scroll_render

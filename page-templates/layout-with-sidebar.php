@@ -3,18 +3,18 @@
  * Template Name: Layout with Sidebar
  * Template Post Type: page, post
  *
- * @package alcatraz
+ * @package carrieforde
  */
 
 get_header(); ?>
 
 	<div id="primary" class="content-area">
 
-		<?php do_action( 'alcatraz_before_main' ); ?>
+		<?php do_action( 'carrieforde_before_main' ); ?>
 
 		<main id="main" class="site-main" role="main">
 
-		<?php do_action( 'alcatraz_before_main_inside' ); ?>
+		<?php do_action( 'carrieforde_before_main_inside' ); ?>
 
 		<?php
 			while ( have_posts() ) :
@@ -32,11 +32,11 @@ get_header(); ?>
 			endwhile;
 		?>
 
-		<?php do_action( 'alcatraz_after_main_inside' ); ?>
+		<?php do_action( 'carrieforde_after_main_inside' ); ?>
 
 		</main>
 
-		<?php do_action( 'alcatraz_after_main' ); ?>
+		<?php do_action( 'carrieforde_after_main' ); ?>
 
 	</div>
 

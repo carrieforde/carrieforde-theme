@@ -4,7 +4,7 @@
  *
  * This template displays all of the <head> section and everything up until <div id="content">
  *
- * @package alcatraz
+ * @package carrieforde
  */
 
 ?><!DOCTYPE html>
@@ -22,33 +22,33 @@
 
 	<div class="menu-screen"></div>
 
-	<?php do_action( 'alcatraz_before' ); ?>
+	<?php do_action( 'carrieforde_before' ); ?>
 
 	<div id="page" class="site">
 
-		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'alcatraz' ); ?></a>
+		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'carrieforde' ); ?></a>
 
-		<?php do_action( 'alcatraz_before_header' ); ?>
+		<?php do_action( 'carrieforde_before_header' ); ?>
 
 		<header id="site-header" class="site-header" role="banner">
 
-			<?php do_action( 'alcatraz_before_header_inside' ); ?>
+			<?php do_action( 'carrieforde_before_header_inside' ); ?>
 
 			<div class="site-branding">
 
-				<?php do_action( 'alcatraz_header' ); ?>
+				<?php do_action( 'carrieforde_header' ); ?>
 
 			</div>
 
 			<?php if ( has_nav_menu( 'menu-1' ) ) : ?>
 
 				<button class="button button--menu-toggle mobile-menu-toggle" type="button">
-					<?php esc_html_e( 'Menu', 'alcatraz' ); ?>
+					<?php esc_html_e( 'Menu', 'carrieforde' ); ?>
 					<span class="bars"></span>
 				</button>
 
 				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<?php do_action( 'alcatraz_before_nav_inside' ); ?>
+					<?php do_action( 'carrieforde_before_nav_inside' ); ?>
 
 					<?php
 					wp_nav_menu( array(
@@ -59,19 +59,19 @@
 					) );
 					?>
 
-					<?php do_action( 'alcatraz_after_nav_inside' ); ?>
+					<?php do_action( 'carrieforde_after_nav_inside' ); ?>
 				</nav>
 
 			<?php endif; ?>
 
-			<?php do_action( 'alcatraz_after_header_inside' ); ?>
+			<?php do_action( 'carrieforde_after_header_inside' ); ?>
 
 		</header>
 
-		<?php do_action( 'alcatraz_after_header' ); ?>
+		<?php do_action( 'carrieforde_after_header' ); ?>
 
-		<?php do_action( 'alcatraz_before_content' ); ?>
+		<?php do_action( 'carrieforde_before_content' ); ?>
 
 		<div id="content" class="site-content">
 
-			<?php do_action( 'alcatraz_before_content_inside' ); ?>
+			<?php do_action( 'carrieforde_before_content_inside' ); ?>

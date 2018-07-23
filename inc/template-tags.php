@@ -2,7 +2,7 @@
 /**
  * Alcatraz custom template tags.
  *
- * @package alcatraz
+ * @package carrieforde
  */
 
 /**
@@ -14,7 +14,7 @@
  *
  * @return string The "Posted on ..." HTML.
  */
-function alcatraz_posted_on( $post_id = 0 ) {
+function carrieforde_posted_on( $post_id = 0 ) {
 
 	if ( ! $post_id ) {
 		$post_id = get_the_ID();
@@ -29,7 +29,7 @@ function alcatraz_posted_on( $post_id = 0 ) {
 
 	$output = '<span class="posted-on"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark" class="posted-on__link">' . $time_string . '</a></span>';
 
-	return apply_filters( 'alcatraz_posted_on', $output, $post_id, $author_id );
+	return apply_filters( 'carrieforde_posted_on', $output, $post_id, $author_id );
 }
 
 /**
@@ -37,8 +37,8 @@ function alcatraz_posted_on( $post_id = 0 ) {
  *
  * @param int $post_id The post ID to use (optional).
  */
-function alcatraz_the_posted_on( $post_id = 0 ) {
-	echo alcatraz_posted_on( $post_id ); // WPCS: XSS OK.
+function carrieforde_the_posted_on( $post_id = 0 ) {
+	echo carrieforde_posted_on( $post_id ); // WPCS: XSS OK.
 }
 
 /**
@@ -50,7 +50,7 @@ function alcatraz_the_posted_on( $post_id = 0 ) {
  *
  * @return string The edit post link HTML.
  */
-function alcatraz_edit_post_link( $post_id = 0 ) {
+function carrieforde_edit_post_link( $post_id = 0 ) {
 
 	if ( ! is_user_logged_in() || ! current_user_can( 'edit_post', $post_id ) ) {
 		return '';
@@ -62,7 +62,7 @@ function alcatraz_edit_post_link( $post_id = 0 ) {
 
 	$link_text = sprintf(
 		'%s %s',
-		esc_html__( 'Edit', 'alcatraz' ),
+		esc_html__( 'Edit', 'carrieforde' ),
 		get_post_type( $post_id )
 	);
 
@@ -72,7 +72,7 @@ function alcatraz_edit_post_link( $post_id = 0 ) {
 		$link_text
 	);
 
-	return apply_filters( 'alcatraz_edit_post_link', $edit_post_link, $post_id );
+	return apply_filters( 'carrieforde_edit_post_link', $edit_post_link, $post_id );
 }
 
 /**
@@ -82,8 +82,8 @@ function alcatraz_edit_post_link( $post_id = 0 ) {
  *
  * @param int $post_id The post ID to use (optional).
  */
-function alcatraz_the_edit_post_link( $post_id = 0 ) {
-	echo alcatraz_edit_post_link( $post_id ); // WPCS: XSS OK.
+function carrieforde_the_edit_post_link( $post_id = 0 ) {
+	echo carrieforde_edit_post_link( $post_id ); // WPCS: XSS OK.
 }
 
 /**
@@ -95,7 +95,7 @@ function alcatraz_the_edit_post_link( $post_id = 0 ) {
  *
  * @return string The entry header HTML.
  */
-function alcatraz_entry_header( $post_id = 0 ) {
+function carrieforde_entry_header( $post_id = 0 ) {
 
 	if ( ! $post_id ) {
 		$post_id = get_the_ID();
@@ -105,11 +105,11 @@ function alcatraz_entry_header( $post_id = 0 ) {
 
 	echo '<header class="entry-header">';
 
-	do_action( 'alcatraz_entry_header_inside', $post_id );
+	do_action( 'carrieforde_entry_header_inside', $post_id );
 
 	echo '</header>';
 
-	return apply_filters( 'alcatraz_entry_header', ob_get_clean(), $post_id );
+	return apply_filters( 'carrieforde_entry_header', ob_get_clean(), $post_id );
 }
 
 /**
@@ -119,8 +119,8 @@ function alcatraz_entry_header( $post_id = 0 ) {
  *
  * @param int $post_id The post ID to use (optional).
  */
-function alcatraz_the_entry_header( $post_id = 0 ) {
-	echo alcatraz_entry_header( $post_id ); // WPCS: XSS OK.
+function carrieforde_the_entry_header( $post_id = 0 ) {
+	echo carrieforde_entry_header( $post_id ); // WPCS: XSS OK.
 }
 
 /**
@@ -132,7 +132,7 @@ function alcatraz_the_entry_header( $post_id = 0 ) {
  *
  * @return string The entry title HTML.
  */
-function alcatraz_entry_title( $post_id = 0 ) {
+function carrieforde_entry_title( $post_id = 0 ) {
 
 	if ( ! $post_id ) {
 		$post_id = get_the_ID();
@@ -156,7 +156,7 @@ function alcatraz_entry_title( $post_id = 0 ) {
 		);
 	}
 
-	return apply_filters( 'alcatraz_entry_title', $title, $post_id );
+	return apply_filters( 'carrieforde_entry_title', $title, $post_id );
 }
 
 /**
@@ -166,8 +166,8 @@ function alcatraz_entry_title( $post_id = 0 ) {
  *
  * @param int $post_id The post ID to use (optional).
  */
-function alcatraz_the_entry_title( $post_id = 0 ) {
-	echo alcatraz_entry_title( $post_id ); // WPCS: XSS OK.
+function carrieforde_the_entry_title( $post_id = 0 ) {
+	echo carrieforde_entry_title( $post_id ); // WPCS: XSS OK.
 }
 
 /**
@@ -179,7 +179,7 @@ function alcatraz_the_entry_title( $post_id = 0 ) {
  *
  * @return string The entry meta HTML.
  */
-function alcatraz_entry_meta( $post_id = 0 ) {
+function carrieforde_entry_meta( $post_id = 0 ) {
 
 	if ( ! $post_id ) {
 		$post_id = get_the_ID();
@@ -187,18 +187,18 @@ function alcatraz_entry_meta( $post_id = 0 ) {
 
 	$meta       = '';
 	$this_type  = get_post_type( $post_id );
-	$post_types = apply_filters( 'alcatraz_entry_meta_post_types', array( 'post' ), $post_id );
+	$post_types = apply_filters( 'carrieforde_entry_meta_post_types', array( 'post' ), $post_id );
 
 	foreach ( $post_types as $post_type ) {
 		if ( $this_type === $post_type ) {
 			$meta = sprintf( '<div class="entry-meta">%s</div>',
-				alcatraz_posted_on( $post_id )
+				carrieforde_posted_on( $post_id )
 			);
 			break;
 		}
 	}
 
-	return apply_filters( 'alcatraz_entry_meta', $meta, $post_id );
+	return apply_filters( 'carrieforde_entry_meta', $meta, $post_id );
 }
 
 /**
@@ -208,8 +208,8 @@ function alcatraz_entry_meta( $post_id = 0 ) {
  *
  * @param int $post_id The post ID to use (optional).
  */
-function alcatraz_the_entry_meta( $post_id = 0 ) {
-	echo alcatraz_entry_meta( $post_id ); // WPCS: XSS OK.
+function carrieforde_the_entry_meta( $post_id = 0 ) {
+	echo carrieforde_entry_meta( $post_id ); // WPCS: XSS OK.
 }
 
 /**
@@ -221,7 +221,7 @@ function alcatraz_the_entry_meta( $post_id = 0 ) {
  *
  * @return string The entry footer HTML.
  */
-function alcatraz_entry_footer( $post_id = 0 ) {
+function carrieforde_entry_footer( $post_id = 0 ) {
 
 	if ( ! $post_id ) {
 		$post_id = get_the_ID();
@@ -231,11 +231,11 @@ function alcatraz_entry_footer( $post_id = 0 ) {
 
 	echo '<footer class="entry-footer">';
 
-	do_action( 'alcatraz_entry_footer_inside', $post_id );
+	do_action( 'carrieforde_entry_footer_inside', $post_id );
 
 	echo '</footer>';
 
-	return apply_filters( 'alcatraz_entry_footer', ob_get_clean(), $post_id );
+	return apply_filters( 'carrieforde_entry_footer', ob_get_clean(), $post_id );
 }
 
 /**
@@ -245,8 +245,8 @@ function alcatraz_entry_footer( $post_id = 0 ) {
  *
  * @param int $post_id The post ID to use (optional).
  */
-function alcatraz_the_entry_footer( $post_id = 0 ) {
-	echo alcatraz_entry_footer( $post_id ); // WPCS: XSS OK.
+function carrieforde_the_entry_footer( $post_id = 0 ) {
+	echo carrieforde_entry_footer( $post_id ); // WPCS: XSS OK.
 }
 
 /**
@@ -261,7 +261,7 @@ function alcatraz_the_entry_footer( $post_id = 0 ) {
  *
  * @return string The term list HTML.
  */
-function alcatraz_get_taxonomy_term_list( $post_id = 0, $taxonomy = '', $label = '', $separator = ', ' ) {
+function carrieforde_get_taxonomy_term_list( $post_id = 0, $taxonomy = '', $label = '', $separator = ', ' ) {
 
 	// Taxonomy is required.
 	if ( ! $taxonomy ) {
@@ -277,7 +277,7 @@ function alcatraz_get_taxonomy_term_list( $post_id = 0, $taxonomy = '', $label =
 		'order'   => 'ASC',
 		'fields'  => 'all',
 	);
-	$terms_args = apply_filters( 'alcatraz_get_taxonomy_term_list_args', $terms_args, $post_id, $taxonomy );
+	$terms_args = apply_filters( 'carrieforde_get_taxonomy_term_list_args', $terms_args, $post_id, $taxonomy );
 
 	$terms = wp_get_post_terms( $post_id, $taxonomy, $terms_args );
 
@@ -313,7 +313,7 @@ function alcatraz_get_taxonomy_term_list( $post_id = 0, $taxonomy = '', $label =
 
 	$output .= '</div>';
 
-	return apply_filters( 'alcatraz_taxonomy_term_list', $output, $post_id, $taxonomy, $label, $separator );
+	return apply_filters( 'carrieforde_taxonomy_term_list', $output, $post_id, $taxonomy, $label, $separator );
 }
 
 /**
@@ -326,20 +326,20 @@ function alcatraz_get_taxonomy_term_list( $post_id = 0, $taxonomy = '', $label =
  * @param string $label     The label to use.
  * @param string $separator The separation string.
  */
-function alcatraz_the_taxonomy_term_list( $post_id = 0, $taxonomy = '', $label = '', $separator = ', ' ) {
-	echo alcatraz_get_taxonomy_term_list( $post_id, $taxonomy, $label, $separator ); // WPCS: XSS OK.
+function carrieforde_the_taxonomy_term_list( $post_id = 0, $taxonomy = '', $label = '', $separator = ', ' ) {
+	echo carrieforde_get_taxonomy_term_list( $post_id, $taxonomy, $label, $separator ); // WPCS: XSS OK.
 }
 
 /**
  * Display the social icons menu.
  */
-function alcatraz_the_social_icons_menu() {
+function carrieforde_the_social_icons_menu() {
 
 	if ( has_nav_menu( 'social' ) ) {
 
 	?>
 
-	<nav id="social-navigation" class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'alcatraz' ); ?>">
+	<nav id="social-navigation" class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'carrieforde' ); ?>">
 
 		<?php
 		wp_nav_menu( array(

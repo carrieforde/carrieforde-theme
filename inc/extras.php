@@ -4,10 +4,10 @@
  *
  * Functionality in this file should ideally find a better final home, eventually.
  *
- * @package alcatraz
+ * @package carrieforde
  */
 
-add_filter( 'body_class', 'alcatraz_body_classes' );
+add_filter( 'body_class', 'carrieforde_body_classes' );
 /**
  * Add custom body classes.
  *
@@ -16,7 +16,7 @@ add_filter( 'body_class', 'alcatraz_body_classes' );
  * @param array $classes Classes for the body element.
  * @return array
  */
-function alcatraz_body_classes( $classes ) {
+function carrieforde_body_classes( $classes ) {
 
 	$footer_widgets     = get_theme_mod( 'footer_widget_areas', 3 );
 	$transparent_header = get_post_meta( get_the_id(), 'transparent_header', true );
@@ -54,7 +54,7 @@ function alcatraz_body_classes( $classes ) {
  *
  * @return string|int
  */
-function alcatraz_empty_or_int( $value ) {
+function carrieforde_empty_or_int( $value ) {
 	if ( '' === $value ) {
 		return '';
 	} else {

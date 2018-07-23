@@ -44,16 +44,16 @@ class Alcatraz_Customize_Alpha_Color_Control extends WP_Customize_Control {
 	public function enqueue() {
 		wp_enqueue_script(
 			'alpha-color-picker',
-			ALCATRAZ_URL . 'vendor/alpha-color-picker/alpha-color-picker.js',
+			CARRIEFORDE_URL . 'vendor/alpha-color-picker/alpha-color-picker.js',
 			array( 'jquery', 'wp-color-picker' ),
-			ALCATRAZ_VERSION,
+			CARRIEFORDE_VERSION,
 			true
 		);
 		wp_enqueue_style(
 			'alpha-color-picker',
-			ALCATRAZ_URL . 'vendor/alpha-color-picker/alpha-color-picker.css',
+			CARRIEFORDE_URL . 'vendor/alpha-color-picker/alpha-color-picker.css',
 			array( 'wp-color-picker' ),
-			ALCATRAZ_VERSION
+			CARRIEFORDE_VERSION
 		);
 	}
 

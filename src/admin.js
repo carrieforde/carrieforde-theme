@@ -5,9 +5,9 @@ import './sass/admin';
 
 (function($) {
   $(document).ready(function() {
-    $('#alcatraz-activation-notice .notice-dismiss').on('click', function() {
+    $('#carrieforde-activation-notice .notice-dismiss').on('click', function() {
       var data = {
-        action: 'alcatraz_hide_activation_notice'
+        action: 'carrieforde_hide_activation_notice'
       };
 
       $.post(ajaxurl, data, function(response) {

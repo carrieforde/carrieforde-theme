@@ -2,7 +2,7 @@
 /**
  * Alcatraz utility functions.
  *
- * @package alcatraz
+ * @package carrieforde
  */
 
 /**
@@ -15,7 +15,7 @@
  *
  * @param int|string|array $log Item to inspect.
  */
-function alcatraz_log( $log ) {
+function carrieforde_log( $log ) {
 	if ( is_array( $log ) || is_object( $log ) ) {
 		error_log( print_r( $log, true ) );
 	} else {
@@ -31,7 +31,7 @@ function alcatraz_log( $log ) {
  * @param mixed $value The value to be tested.
  * @return bool
  */
-function alcatraz_true_or_false( $value ) {
+function carrieforde_true_or_false( $value ) {
 
 	if ( ! isset( $value ) ) {
 		return false;
@@ -53,7 +53,7 @@ function alcatraz_true_or_false( $value ) {
  *
  * @return bool Whether the box is checked.
  */
-function alcatraz_validate_checkbox( $checked ) {
+function carrieforde_validate_checkbox( $checked ) {
 
 	return ( ( isset( $checked ) && true === $checked ) ? true : false );
 }

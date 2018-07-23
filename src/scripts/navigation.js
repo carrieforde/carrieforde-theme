@@ -29,9 +29,9 @@ export const AlcatrazNavigation = (function($) {
 
   const $body = $('body'),
     $window = $(window),
-    toggleText = alcatraz_vars.menu_toggle || '', // eslint-disable-line camelcase
-    closeText = alcatraz_vars.menu_close || '', // eslint-disable-line camelcase
-    slideDuration = alcatraz_vars.slide_duration || 300; // eslint-disable-line camelcase
+    toggleText = carrieforde_vars.menu_toggle || '', // eslint-disable-line camelcase
+    closeText = carrieforde_vars.menu_close || '', // eslint-disable-line camelcase
+    slideDuration = carrieforde_vars.slide_duration || 300; // eslint-disable-line camelcase
 
   /**
    * Toggle a 'focus' class on list items when using keyboard navigation.
@@ -577,7 +577,7 @@ export const AlcatrazNavigation = (function($) {
    * @returns  {object}  The original this.
    */
   const initSubPageNavigation = function() {
-    const $subNav = $('.alcatraz-sub-page-nav > ul');
+    const $subNav = $('.carrieforde-sub-page-nav > ul');
 
     if (!$subNav.length) {
       return false;

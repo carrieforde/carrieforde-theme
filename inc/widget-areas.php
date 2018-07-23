@@ -2,24 +2,24 @@
 /**
  * Alcatraz Widget Areas.
  *
- * @package alcatraz
+ * @package carrieforde
  */
 
-add_action( 'widgets_init', 'alcatraz_register_widget_areas' );
+add_action( 'widgets_init', 'carrieforde_register_widget_areas' );
 /**
  * Register the Alcatraz widget areas.
  *
  * @since  1.0.0
  */
-function alcatraz_register_widget_areas() {
+function carrieforde_register_widget_areas() {
 
 	$footer_widgets = get_theme_mod( 'footer_widget_areas', 3 );
 
 	// Primary Sidebar.
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar 1', 'alcatraz' ),
+		'name'          => esc_html__( 'Sidebar 1', 'carrieforde' ),
 		'id'            => 'sidebar-1',
-		'description'   => __( 'Shows on the left or right side of the page or is hidden based on the "Page Layout" option', 'alcatraz' ),
+		'description'   => __( 'Shows on the left or right side of the page or is hidden based on the "Page Layout" option', 'carrieforde' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -33,9 +33,9 @@ function alcatraz_register_widget_areas() {
 		// handle that case separately.
 		if ( 1 === (int) $footer_widgets ) {
 			register_sidebar( array(
-				'name'          => esc_html__( 'Footer', 'alcatraz' ),
+				'name'          => esc_html__( 'Footer', 'carrieforde' ),
 				'id'            => 'footer-widget-area-1',
-				'description'   => __( 'Shows in the footer', 'alcatraz' ),
+				'description'   => __( 'Shows in the footer', 'carrieforde' ),
 				'before_widget' => '<section id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</section>',
 				'before_title'  => '<h2 class="widget-title">',
@@ -44,9 +44,9 @@ function alcatraz_register_widget_areas() {
 		} else {
 			register_sidebars( (int) $footer_widgets, array(
 				/* translators: %d: the widget number. */
-				'name'          => esc_html__( 'Footer %d', 'alcatraz' ),
+				'name'          => esc_html__( 'Footer %d', 'carrieforde' ),
 				'id'            => 'footer-widget-area',
-				'description'   => __( 'Shows in the footer', 'alcatraz' ),
+				'description'   => __( 'Shows in the footer', 'carrieforde' ),
 				'before_widget' => '<section id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</section>',
 				'before_title'  => '<h2 class="widget-title">',
@@ -56,34 +56,34 @@ function alcatraz_register_widget_areas() {
 	}
 }
 
-add_action( 'alcatraz_sidebar', 'alcatraz_output_primary_sidebar' );
+add_action( 'carrieforde_sidebar', 'carrieforde_output_primary_sidebar' );
 /**
  * Maybe output the Primary Sidebar widget area.
  *
  * @since  1.0.0
  */
-function alcatraz_output_primary_sidebar() {
+function carrieforde_output_primary_sidebar() {
 
 	?>
 
 	<aside id="secondary" class="sidebar widget-area">
-		<?php do_action( 'alcatraz_before_sidebar' ); ?>
+		<?php do_action( 'carrieforde_before_sidebar' ); ?>
 		<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
 			<?php dynamic_sidebar( 'sidebar-1' ); ?>
 		<?php endif; ?>
-		<?php do_action( 'alcatraz_after_sidebar' ); ?>
+		<?php do_action( 'carrieforde_after_sidebar' ); ?>
 	</aside>
 
 	<?php
 }
 
-add_action( 'alcatraz_footer', 'alcatraz_output_footer_widget_areas', 8 );
+add_action( 'carrieforde_footer', 'carrieforde_output_footer_widget_areas', 8 );
 /**
  * Maybe output the Footer widget areas.
  *
  * @since  1.0.0
  */
-function alcatraz_output_footer_widget_areas() {
+function carrieforde_output_footer_widget_areas() {
 
 	$footer_widgets = get_theme_mod( 'footer_widget_areas', 3 );
 
