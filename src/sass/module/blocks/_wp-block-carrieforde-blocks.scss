@@ -11,8 +11,12 @@
 			padding: 0 5rem 0 4rem;
 		}
 
-		@include mq-min($desktop) {
+		@include mq-min(1100px) {
 			padding: 0 $sp-double;
+		}
+
+		@include mq-min($desktop) {
+			padding: 0;
 		}
 	}
 }
