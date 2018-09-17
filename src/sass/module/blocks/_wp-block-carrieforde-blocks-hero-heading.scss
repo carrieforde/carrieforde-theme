@@ -22,6 +22,18 @@ $header-height: rem(-50) + $sp-double * -2;
 		margin-bottom: $sp-single-half;
 	}
 
+	.wp-block-carrieforde-blocks__wrapper {
+		padding: 0 $sp-double * 2 0 $sp-single * 3;
+
+		@include mq-min($tablet-landscape) {
+			padding: 0 5rem 0 4.5rem;
+		}
+
+		@include mq-min($desktop) {
+			padding: 0;
+		}
+	}
+
 	p {
 		margin-bottom: 1em;
 	}
