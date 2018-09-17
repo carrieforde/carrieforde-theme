@@ -10,15 +10,18 @@ img {
 .image {
 
 	&--circle {
-		clip-path: circle();
-		margin: 0 0 $sp-double $sp-double;
-		max-width: 100%;
-		shape-outside: circle();
-		width: rem(300);
 
-		@include mq-max($tablet-portrait) {
-			float: none;
-			margin: 0 auto $sp-single;
+		figure {
+			clip-path: circle();
+			margin: 0 0 $sp-double $sp-double;
+			max-width: 100%;
+			shape-outside: circle();
+			width: rem(300);
+
+			@include mq-max($tablet-portrait) {
+				float: none;
+				margin: 0 auto $sp-single;
+			}
 		}
 	}
 }
