@@ -244,6 +244,15 @@ function carrieforde_block_editor_styles() {
 		array(),
 		CARRIEFORDE_VERSION
 	);
+
+	// Block scripts.
+	wp_enqueue_script(
+		'carrieforde-theme-blocks',
+		CARRIEFORDE_URL . 'dist/blocks-bundle.js',
+		array( 'wp-blocks' ),
+		CARRIEFORDE_VERSION,
+		true
+	);
 }
 
 /**

@@ -10,7 +10,8 @@ const config = {
   entry: {
     frontend: './src/index.js',
     customizer: './src/customizer.js',
-    admin: './src/admin.js'
+    admin: './src/admin.js',
+    blocks: './src/blocks.js'
   },
   output: {
     path: path.join(__dirname, 'dist'),
