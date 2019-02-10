@@ -62,7 +62,7 @@ class Alcatraz_Customize_Alpha_Color_Control extends WP_Customize_Control {
 	 */
 	public function render_content() {
 
-		// Process the palette
+		// Process the palette.
 		if ( is_array( $this->palette ) ) {
 			$palette = implode( '|', $this->palette );
 		} else {
@@ -75,14 +75,16 @@ class Alcatraz_Customize_Alpha_Color_Control extends WP_Customize_Control {
 
 		// Begin the output. ?>
 		<label>
-			<?php // Output the label and description if they were passed in.
+			<?php
+			// Output the label and description if they were passed in.
 			if ( ! empty( $this->label ) ) {
 				echo '<span class="customize-control-title">' . esc_html( $this->label ) . '</span>';
 			}
 			if ( ! empty( $this->description ) ) {
 				echo '<span class="description customize-control-description">' . wp_kses_post( $this->description ) . '</span>';
-			} ?>
-			<input class="alpha-color-control" type="text" data-show-opacity="<?php echo $show_opacity; ?>" data-palette="<?php echo esc_attr( $palette ); ?>" data-default-color="<?php echo esc_attr( $this->settings['default']->default ); ?>" <?php $this->link(); ?>  />
+			}
+			?>
+			<input class="alpha-color-control" type="text" data-show-opacity="<?php echo $show_opacity; // WPCS: XSS OK. ?>" data-palette="<?php echo esc_attr( $palette ); ?>" data-default-color="<?php echo esc_attr( $this->settings['default']->default ); ?>" <?php $this->link(); ?>  />
 		</label>
 		<?php
 	}

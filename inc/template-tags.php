@@ -22,7 +22,8 @@ function carrieforde_posted_on( $post_id = 0 ) {
 
 	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
 
-	$time_string = sprintf( $time_string,
+	$time_string = sprintf(
+		 $time_string,
 		esc_attr( get_the_date( DATE_W3C ) ),
 		esc_html( get_the_date() )
 	);
@@ -191,7 +192,8 @@ function carrieforde_entry_meta( $post_id = 0 ) {
 
 	foreach ( $post_types as $post_type ) {
 		if ( $this_type === $post_type ) {
-			$meta = sprintf( '<div class="entry-meta">%s</div>',
+			$meta = sprintf(
+				 '<div class="entry-meta">%s</div>',
 				carrieforde_posted_on( $post_id )
 			);
 			break;
@@ -342,12 +344,14 @@ function carrieforde_the_social_icons_menu() {
 	<nav id="social-navigation" class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'carrieforde' ); ?>">
 
 		<?php
-		wp_nav_menu( array(
-			'theme_location' => 'social',
-			'menu_class'     => 'menu social-links-menu',
-			'depth'          => 1,
-			'container'      => '',
-		) );
+		wp_nav_menu(
+			 array(
+				 'theme_location' => 'social',
+				 'menu_class'     => 'menu social-links-menu',
+				 'depth'          => 1,
+				 'container'      => '',
+			 )
+			);
 		?>
 	</nav>
 

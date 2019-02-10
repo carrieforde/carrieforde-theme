@@ -4,6 +4,7 @@
  *
  * @package carrieforde
  */
+
 ?>
 
 <?php do_action( 'carrieforde_before_entry' ); ?>

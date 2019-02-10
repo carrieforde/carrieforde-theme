@@ -16,15 +16,17 @@ function carrieforde_register_widget_areas() {
 	$footer_widgets = get_theme_mod( 'footer_widget_areas', 3 );
 
 	// Primary Sidebar.
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar 1', 'carrieforde' ),
-		'id'            => 'sidebar-1',
-		'description'   => __( 'Shows on the left or right side of the page or is hidden based on the "Page Layout" option', 'carrieforde' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
+	register_sidebar(
+		 array(
+			 'name'          => esc_html__( 'Sidebar 1', 'carrieforde' ),
+			 'id'            => 'sidebar-1',
+			 'description'   => __( 'Shows on the left or right side of the page or is hidden based on the "Page Layout" option', 'carrieforde' ),
+			 'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			 'after_widget'  => '</section>',
+			 'before_title'  => '<h2 class="widget-title">',
+			 'after_title'   => '</h2>',
+		 )
+		);
 
 	// Footer.
 	if ( 0 < $footer_widgets ) {
@@ -32,26 +34,31 @@ function carrieforde_register_widget_areas() {
 		// Calling register_sidebars to register only one widget area causes problems, so we'll
 		// handle that case separately.
 		if ( 1 === (int) $footer_widgets ) {
-			register_sidebar( array(
-				'name'          => esc_html__( 'Footer', 'carrieforde' ),
-				'id'            => 'footer-widget-area-1',
-				'description'   => __( 'Shows in the footer', 'carrieforde' ),
-				'before_widget' => '<section id="%1$s" class="widget %2$s">',
-				'after_widget'  => '</section>',
-				'before_title'  => '<h2 class="widget-title">',
-				'after_title'   => '</h2>',
-			) );
+			register_sidebar(
+				 array(
+					 'name'          => esc_html__( 'Footer', 'carrieforde' ),
+					 'id'            => 'footer-widget-area-1',
+					 'description'   => __( 'Shows in the footer', 'carrieforde' ),
+					 'before_widget' => '<section id="%1$s" class="widget %2$s">',
+					 'after_widget'  => '</section>',
+					 'before_title'  => '<h2 class="widget-title">',
+					 'after_title'   => '</h2>',
+				 )
+				);
 		} else {
-			register_sidebars( (int) $footer_widgets, array(
-				/* translators: %d: the widget number. */
-				'name'          => esc_html__( 'Footer %d', 'carrieforde' ),
-				'id'            => 'footer-widget-area',
-				'description'   => __( 'Shows in the footer', 'carrieforde' ),
-				'before_widget' => '<section id="%1$s" class="widget %2$s">',
-				'after_widget'  => '</section>',
-				'before_title'  => '<h2 class="widget-title">',
-				'after_title'   => '</h2>',
-			) );
+			register_sidebars(
+				 (int) $footer_widgets,
+				array(
+					/* translators: %d: the widget number. */
+					'name'          => esc_html__( 'Footer %d', 'carrieforde' ),
+					'id'            => 'footer-widget-area',
+					'description'   => __( 'Shows in the footer', 'carrieforde' ),
+					'before_widget' => '<section id="%1$s" class="widget %2$s">',
+					'after_widget'  => '</section>',
+					'before_title'  => '<h2 class="widget-title">',
+					'after_title'   => '</h2>',
+				)
+				);
 		}
 	}
 }

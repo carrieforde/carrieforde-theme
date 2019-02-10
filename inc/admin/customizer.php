@@ -86,7 +86,9 @@ function carrieforde_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control(
-		new WP_Customize_Media_Control( $wp_customize, 'alt_logo_id',
+		new WP_Customize_Media_Control(
+			 $wp_customize,
+			'alt_logo_id',
 			array(
 				'label'   => __( 'Alternate Logo', 'carrieforde' ),
 				'section' => 'title_tagline',

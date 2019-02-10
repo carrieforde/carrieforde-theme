@@ -51,12 +51,14 @@
 					<?php do_action( 'carrieforde_before_nav_inside' ); ?>
 
 					<?php
-					wp_nav_menu( array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'menu-1',
-						'menu_class'     => 'menu primary-menu',
-						'container'      => '',
-					) );
+					wp_nav_menu(
+						 array(
+							 'theme_location' => 'menu-1',
+							 'menu_id'        => 'menu-1',
+							 'menu_class'     => 'menu primary-menu',
+							 'container'      => '',
+						 )
+						);
 					?>
 
 					<?php do_action( 'carrieforde_after_nav_inside' ); ?>

@@ -4,6 +4,7 @@
  *
  * @package carrieforde
  */
+
 ?>
 
 <?php do_action( 'carrieforde_before_entry' ); ?>
@@ -20,10 +21,12 @@
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'carrieforde' ),
-				'after'  => '</div>',
-			) );
+			wp_link_pages(
+				array(
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'carrieforde' ),
+					'after'  => '</div>',
+				)
+			);
 		?>
 	</div>
 

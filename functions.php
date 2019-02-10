@@ -34,34 +34,42 @@ if ( ! function_exists( 'carrieforde_setup' ) ) :
 		add_theme_support( 'custom-logo' );
 
 		// Register menus.
-		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'carrieforde' ),
-			'social' => esc_html__( 'Social', 'carrieforde' ),
-		) );
+		register_nav_menus(
+			array(
+				'menu-1' => esc_html__( 'Primary', 'carrieforde' ),
+				'social' => esc_html__( 'Social', 'carrieforde' ),
+			)
+		);
 
 		// Use html5 markup for certain features.
 		add_theme_support(
 			'html5',
-			apply_filters( 'carrieforde_html5_supports', array(
-				'search-form',
-				'comment-form',
-				'comment-list',
-				'gallery',
-				'caption',
-			) )
+			apply_filters(
+				'carrieforde_html5_supports',
+				array(
+					'search-form',
+					'comment-form',
+					'comment-list',
+					'gallery',
+					'caption',
+				)
+			)
 		);
 
 		// Maybe enable post formats.
 		if ( apply_filters( 'carrieforde_enable_post_formats', false ) ) {
 			add_theme_support(
 				'post-formats',
-				apply_filters( 'carrieforde_custom_header_args', array(
-					'aside',
-					'image',
-					'video',
-					'quote',
-					'link',
-				) )
+				apply_filters(
+					'carrieforde_custom_header_args',
+					array(
+						'aside',
+						'image',
+						'video',
+						'quote',
+						'link',
+					)
+				)
 			);
 		}
 
@@ -69,13 +77,16 @@ if ( ! function_exists( 'carrieforde_setup' ) ) :
 		if ( apply_filters( 'carrieforde_enable_custom_header', false ) ) {
 			add_theme_support(
 				'custom-header',
-				apply_filters( 'carrieforde_custom_header_args', array(
-					'default-image'      => '',
-					'default-text-color' => '000000',
-					'width'              => 1200,
-					'height'             => 320,
-					'flex-height'        => true,
-				) )
+				apply_filters(
+					'carrieforde_custom_header_args',
+					array(
+						'default-image'      => '',
+						'default-text-color' => '000000',
+						'width'              => 1200,
+						'height'             => 320,
+						'flex-height'        => true,
+					)
+				)
 			);
 		}
 
@@ -83,46 +94,52 @@ if ( ! function_exists( 'carrieforde_setup' ) ) :
 		if ( apply_filters( 'carrieforde_enable_custom_background', false ) ) {
 			add_theme_support(
 				'custom-background',
-				apply_filters( 'carrieforde_custom_background_args', array(
-					'default-color' => 'ffffff',
-					'default-image' => '',
-				) )
+				apply_filters(
+					'carrieforde_custom_background_args',
+					array(
+						'default-color' => 'ffffff',
+						'default-image' => '',
+					)
+				)
 			);
 		}
 
 		// Add support for editor color palette.
-		add_theme_support( 'editor-color-palette', array(
+		add_theme_support(
+			'editor-color-palette',
 			array(
-				'name'  => __( 'Marjorelle Blue', 'carrieforde' ),
-				'slug'  => 'marjorelle-blue',
-				'color' => '#7341f1',
-			),
-			array(
-				'name'  => __( 'Shamrock', 'carrieforde' ),
-				'slug'  => 'shamrock',
-				'color' => '#55ee9e',
-			),
-			array(
-				'name'  => __( 'Black Russian', 'carrieforde' ),
-				'slug'  => 'black-russian',
-				'color' => '#252428',
-			),
-			array(
-				'name'  => __( 'Gun Powder', 'carrieforde' ),
-				'slug'  => 'gun-powder',
-				'color' => '#4b4950',
-			),
-			array(
-				'name'  => __( 'Gray Suit', 'carrieforde' ),
-				'slug'  => 'gray-suit',
-				'color' => '#97949e',
-			),
-			array(
-				'name'  => __( 'White', 'carrieforde' ),
-				'slug'  => 'white',
-				'color' => '#fff',
-			),
-		) );
+				array(
+					'name'  => __( 'Marjorelle Blue', 'carrieforde' ),
+					'slug'  => 'marjorelle-blue',
+					'color' => '#7341f1',
+				),
+				array(
+					'name'  => __( 'Shamrock', 'carrieforde' ),
+					'slug'  => 'shamrock',
+					'color' => '#55ee9e',
+				),
+				array(
+					'name'  => __( 'Black Russian', 'carrieforde' ),
+					'slug'  => 'black-russian',
+					'color' => '#252428',
+				),
+				array(
+					'name'  => __( 'Gun Powder', 'carrieforde' ),
+					'slug'  => 'gun-powder',
+					'color' => '#4b4950',
+				),
+				array(
+					'name'  => __( 'Gray Suit', 'carrieforde' ),
+					'slug'  => 'gray-suit',
+					'color' => '#97949e',
+				),
+				array(
+					'name'  => __( 'White', 'carrieforde' ),
+					'slug'  => 'white',
+					'color' => '#fff',
+				),
+			)
+		);
 
 		// Disable custom colors from editor palette.
 		add_theme_support( 'disable-custom-colors' );

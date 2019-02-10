@@ -4,6 +4,7 @@
  *
  * @package carrieforde
  */
+
 ?>
 
 <?php do_action( 'carrieforde_before_entry' ); ?>
@@ -17,17 +18,29 @@
 
 	<div class="entry-content">
 		<?php
-			the_content( sprintf(
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&raquo;</span>', 'carrieforde' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
+			the_content(
+				sprintf(
+					wp_kses(
+						/* translators: %s: the post title */
+						__( 'Continue reading %s <span class="meta-nav">&raquo;</span>', 'carrieforde' ),
+						array(
+							'span' => array(
+								'class' => array(),
+							),
+						)
+					),
+					the_title( '<span class="screen-reader-text">"', '"</span>', false )
+				)
+			);
 		?>
 
 		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'carrieforde' ),
-				'after'  => '</div>',
-			) );
+			wp_link_pages(
+				array(
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'carrieforde' ),
+					'after'  => '</div>',
+				)
+			);
 		?>
 	</div>
 
