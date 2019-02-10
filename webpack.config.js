@@ -100,7 +100,7 @@ const config = {
     new BrowserSyncPlugin({
       files: '**/*.php',
       injectChanges: true,
-      proxy: 'https://carrieforde.test'
+      proxy: 'https://carrieforde.local'
     })
   ]
 };

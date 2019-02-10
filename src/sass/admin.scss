@@ -8,7 +8,7 @@
 @import "config";
 
 // Base
-@import "admin/base";
+@import "base/base";
 @import "base/wp-classes";
 
 // Modules
@@ -19,3 +19,22 @@
 @import "module/blocks/wp-block-carrieforde-blocks";
 @import "module/blocks/wp-block-carrieforde-blocks-grid-list";
 @import "module/blocks/wp-block-carrieforde-blocks-hero-heading";
+
+.editor-post-title__block .editor-post-title__input {
+	font-family: $base-font-family !important;
+}
+
+// Main column width
+.wp-block {
+	max-width: $page-content-width;
+}
+
+// Width of "wide" blocks
+.wp-block[data-align="wide"] {
+	max-width: $content-width;
+}
+
+// Width of "full-wide" blocks
+.wp-block[data-align="full"] {
+	max-width: none;
+}

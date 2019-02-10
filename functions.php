@@ -146,6 +146,18 @@ if ( ! function_exists( 'carrieforde_setup' ) ) :
 
 		// Enable wide & full alignment for editor blocks.
 		add_theme_support( 'align-wide' );
+
+		// Enable support for responsive embeds.
+		add_theme_support( 'responsive-embeds' );
+
+		// Enable support for editor styles.
+		add_theme_support( 'editor-styles' );
+
+		// Enqueue editor font.
+		add_editor_style( str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Inconsolata|Karla' ) );
+
+		// Enqueue editor styles.
+		add_editor_style( 'dist/admin.css' );
 	}
 endif;
 
