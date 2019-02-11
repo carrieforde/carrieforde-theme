@@ -1,0 +1,27 @@
+$header-height: rem(-50) + $sp-double * -2;
+
+.site {
+	margin: 0 auto;
+	max-width: 100%;
+	padding: $sp-single;
+	width: $site-width;
+}
+
+.site-content {
+	margin: 0 auto;
+	max-width: 100%;
+	width: $content-width;
+
+	.has-transparent-header & {
+		margin-top: $header-height;
+	}
+}
+
+.content-area {
+
+	.single-post & {
+		margin: 0 auto;
+		max-width: 100%;
+		width: $page-content-width;
+	}
+}

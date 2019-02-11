@@ -1,0 +1,24 @@
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: "Karla", sans-serif !default;
+$font-family-monospace: "Inconsolata", monospace !default;
+// stylelint-enable
+
+/// Set the `body` font family.
+///
+/// @type String
+$base-font-family: $font-family-sans-serif;
+
+/// Set the base (`root`) font size for the project. This should be unitless!
+///
+/// @type Number
+$base-font-size: 18 !default;
+
+/// Set the base line height for the project. This value should be unitless and represent the pixel equivalent.
+///
+/// @type Number
+$base-line-height: 29 !default;
+
+/// Set the base font weight for the project.
+///
+/// @type {Number|String}
+$base-font-weight: 400 !default;

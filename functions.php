@@ -109,29 +109,39 @@ if ( ! function_exists( 'carrieforde_setup' ) ) :
 			'editor-color-palette',
 			array(
 				array(
-					'name'  => __( 'Marjorelle Blue', 'carrieforde' ),
-					'slug'  => 'marjorelle-blue',
-					'color' => '#7341f1',
+					'name'  => __( 'Purple Heart', 'carrieforde' ),
+					'slug'  => 'primary',
+					'color' => '#5e1fe5',
 				),
 				array(
-					'name'  => __( 'Shamrock', 'carrieforde' ),
-					'slug'  => 'shamrock',
-					'color' => '#55ee9e',
+					'name'  => __( 'Turquoise', 'carrieforde' ),
+					'slug'  => 'accent',
+					'color' => '#48ea96',
 				),
 				array(
-					'name'  => __( 'Black Russian', 'carrieforde' ),
-					'slug'  => 'black-russian',
-					'color' => '#252428',
+					'name'  => __( 'Baltic Sea', 'carrieforde' ),
+					'slug'  => 'gray-900',
+					'color' => '#2d2c30',
 				),
 				array(
-					'name'  => __( 'Gun Powder', 'carrieforde' ),
-					'slug'  => 'gun-powder',
-					'color' => '#4b4950',
+					'name'  => __( 'Scarpa Flow', 'carrieforde' ),
+					'slug'  => 'gray-700',
+					'color' => '#605c66',
 				),
 				array(
-					'name'  => __( 'Gray Suit', 'carrieforde' ),
-					'slug'  => 'gray-suit',
-					'color' => '#97949e',
+					'name'  => __( 'Mountain Mist', 'carrieforde' ),
+					'slug'  => 'gray-500',
+					'color' => '#95919c',
+				),
+				array(
+					'name'  => __( 'French Gray', 'carrieforde' ),
+					'slug'  => 'gray-300',
+					'color' => '#c9c7cc',
+				),
+				array(
+					'name'  => __( 'Alabaster', 'carrieforde' ),
+					'slug'  => 'gray-100',
+					'color' => '#fafafa',
 				),
 				array(
 					'name'  => __( 'White', 'carrieforde' ),
@@ -277,7 +287,7 @@ function carrieforde_block_editor_styles() {
 	// Block scripts.
 	wp_enqueue_script(
 		'carrieforde-theme-blocks',
-		CARRIEFORDE_URL . 'dist/blocks-bundle.js',
+		CARRIEFORDE_URL . 'dist/editor-bundle.js',
 		array( 'wp-blocks' ),
 		CARRIEFORDE_VERSION,
 		true

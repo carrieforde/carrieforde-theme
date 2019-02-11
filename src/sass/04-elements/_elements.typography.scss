@@ -1,0 +1,97 @@
+code,
+kbd,
+pre,
+samp,
+tt,
+var {
+	font-family: $font-family-monospace;
+}
+
+pre {
+	overflow-x: scroll;
+}
+
+a {
+	color: $link;
+	transition: color 0.3s ease-in-out;
+
+	&:visited {
+		color: $link-visited;
+	}
+
+	&:hover {
+		color: $link-hover;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 1.2;
+	margin: 0;
+}
+
+h1,
+.h1 {
+	font-size: em(36);
+}
+
+h2,
+.h2 {
+	font-size: em(30);
+}
+
+h3,
+.h3 {
+	font-size: em(24);
+}
+
+h4,
+.h4 {
+	font-size: em(20);
+}
+
+h5,
+.h5 {
+	font-size: em(18);
+}
+
+h6,
+.h6 {
+	font-size: em(15);
+}
+
+p {
+	margin: 0 0 1.5em;
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+
+	&.is-style-tip {
+		background-color: rgba($color-accent, 0.4);
+		margin-top: 1.5em;
+		padding: $sp-single;
+	}
+}
+
+pre {
+	border: 1px solid $color-gray-300;
+	overflow-x: scroll;
+	padding: $sp-single;
+}
+
+p,
+pre {
+
+	+ h2,
+	+ h3,
+	+ h4,
+	+ h5,
+	+ h6 {
+		margin: $sp-triple 0 $sp-half;
+	}
+}

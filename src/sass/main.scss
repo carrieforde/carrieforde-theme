@@ -1,55 +1,51 @@
-// Aurora Utilities
-@import "aurora-utilities";
+// Settings
+@import "01-settings/settings.breakpoints";
+@import "01-settings/settings.colors";
+@import "01-settings/settings.sizes";
+@import "01-settings/settings.social-icons";
+@import "01-settings/settings.transitions";
+@import "01-settings/settings.typography";
+@import "01-settings/settings.z-index";
+@import "01-settings/settings.keyframes";
 
-// Theme utilities.
-@import "utilities/background-icon";
+// Tools
+@import "02-tools/tools.aurora-utilities";
 
-// Theme config
-@import "config";
+// Generic
+@import "03-generic/generic.sanitize";
 
-// Reset
-@import "sanitize";
+// Elements
+@import "04-elements/elements.base";
+@import "04-elements/elements.buttons";
+@import "04-elements/elements.forms";
+@import "04-elements/elements.media";
+@import "04-elements/elements.typography";
 
-// Base
-@import "base/base";
-@import "base/utilities";
-@import "base/buttons";
-@import "base/media";
-@import "base/forms";
-@import "base/wp-classes";
+// Objects
+@import "05-objects/objects.comments";
+@import "05-objects/objects.footer-credits";
+@import "05-objects/objects.footer-widget-area";
+@import "05-objects/objects.menu";
+@import "05-objects/objects.page-with-sidebar";
+@import "05-objects/objects.posts-navigation";
+@import "05-objects/objects.site";
+@import "05-objects/objects.site-header";
+@import "05-objects/objects.site-footer";
+@import "05-objects/objects.wp-caption";
+@import "05-objects/objects.custom-logo";
+@import "05-objects/objects.site-title";
+@import "05-objects/objects.social-navigation";
 
-// Module
-@import "module/posts-navigation";
-@import "module/menu";
-@import "module/main-navigation";
-@import "module/social-navigation";
-@import "module/social-links-menu";
-@import "module/footer-credits";
-@import "module/site-title";
-@import "module/comments";
-@import "module/portfolio-link";
-@import "module/post";
-@import "module/project";
-@import "module/spinner";
-@import "module/term";
-@import "module/custom-logo";
-@import "module/has-transparent-header";
-@import "module/section-title";
+// Components
+@import "06-components/components.main-navigation";
+@import "06-components/components.toggles";
+@import "06-components/components.wp-block-image";
+@import "06-components/components.wp-block-heading";
+@import "06-components/components.icons";
+@import "06-components/components.term";
+@import "06-components/components.wp-block-separator";
 
-// Blocks
-@import "module/blocks/wp-block-separator";
-@import "module/blocks/wp-block-carrieforde-blocks";
-@import "module/blocks/wp-block-carrieforde-blocks-grid-list";
-@import "module/blocks/wp-block-carrieforde-blocks-hero-heading";
-
-// Layout
-@import "layout/site";
-@import "layout/site-header";
-@import "layout/footer/site-footer";
-@import "layout/footer/has-footer-widgets";
-@import "layout/footer/footer-widget-areas-2";
-@import "layout/footer/footer-widget-areas-3";
-@import "layout/footer/footer-widget-areas-4";
-
-// Templates
-@import "templates/layout-with-sidebar";
+// trumps
+@import "07-trumps/trumps.alignments";
+@import "07-trumps/trumps.colors";
+@import "07-trumps/trumps.screen-reader-text";

@@ -1,24 +1,54 @@
-// Aurora Utilities
-@import "aurora-utilities";
+// Settings
+@import "01-settings/settings.breakpoints";
+@import "01-settings/settings.colors";
+@import "01-settings/settings.sizes";
+@import "01-settings/settings.social-icons";
+@import "01-settings/settings.transitions";
+@import "01-settings/settings.typography";
+@import "01-settings/settings.z-index";
+@import "01-settings/settings.keyframes";
 
-// Theme utilities.
-@import "utilities/background-icon";
+// Tools
+@import "02-tools/tools.aurora-utilities";
 
-// Theme config
-@import "config";
+// Generic
+@import "03-generic/generic.sanitize";
 
-// Base
-@import "base/base";
-@import "base/wp-classes";
+// Elements
+@import "04-elements/elements.base";
+@import "04-elements/elements.buttons";
+@import "04-elements/elements.forms";
+@import "04-elements/elements.media";
+@import "04-elements/elements.typography";
 
-// Modules
-@import "module/section-title";
+// Objects
+@import "05-objects/objects.comments";
+@import "05-objects/objects.footer-credits";
+@import "05-objects/objects.footer-widget-area";
+@import "05-objects/objects.menu";
+@import "05-objects/objects.page-with-sidebar";
+@import "05-objects/objects.posts-navigation";
+@import "05-objects/objects.site";
+@import "05-objects/objects.site-header";
+@import "05-objects/objects.site-footer";
+@import "05-objects/objects.wp-caption";
+@import "05-objects/objects.custom-logo";
+@import "05-objects/objects.site-title";
+@import "05-objects/objects.social-navigation";
 
-// Block styles
-@import "module/blocks/wp-block-separator";
-@import "module/blocks/wp-block-carrieforde-blocks";
-@import "module/blocks/wp-block-carrieforde-blocks-grid-list";
-@import "module/blocks/wp-block-carrieforde-blocks-hero-heading";
+// Components
+@import "06-components/components.main-navigation";
+@import "06-components/components.toggles";
+@import "06-components/components.wp-block-image";
+@import "06-components/components.wp-block-heading";
+@import "06-components/components.icons";
+@import "06-components/components.term";
+@import "06-components/components.wp-block-separator";
+
+// trumps
+@import "07-trumps/trumps.alignments";
+@import "07-trumps/trumps.colors";
+@import "07-trumps/trumps.screen-reader-text";
 
 .editor-post-title__block .editor-post-title__input {
 	font-family: $base-font-family !important;

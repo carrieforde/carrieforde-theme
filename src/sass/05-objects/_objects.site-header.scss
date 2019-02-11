@@ -1,0 +1,15 @@
+.site-header {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	max-width: 100%;
+	overflow-x: hidden;
+	position: relative;
+	width: $content-width;
+	z-index: z(heading);
+
+	@include mq-min($tablet-landscape) {
+		overflow: visible;
+	}
+}

@@ -1,0 +1,54 @@
+.button {
+
+	&--next,
+	&--previous {
+		color: $color-primary;
+		font-size: 1.25rem;
+		font-weight: 700;
+
+		&:after,
+		&:before {
+			display: inline-block;
+			transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+		}
+
+		&:hover {
+
+			&:after,
+			&:before {
+				color: $color-accent;
+			}
+		}
+	}
+
+	&--previous {
+
+		&:before {
+			content: "\2190";
+			margin-right: $sp-quarter;
+		}
+
+		&:hover {
+
+			&:before {
+				transform: translateX($sp-quarter * -1);
+			}
+		}
+	}
+
+	&--next {
+		margin-left: auto;
+
+		&:after {
+			content: "\2192";
+			margin-left: $sp-quarter;
+		}
+
+		&:hover {
+
+			&:after {
+				transform: translateX($sp-quarter);
+			}
+		}
+	}
+}

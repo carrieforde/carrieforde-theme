@@ -344,13 +344,13 @@ function carrieforde_the_social_icons_menu() {
 	<nav id="social-navigation" class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'carrieforde' ); ?>">
 
 		<?php
-		wp_nav_menu(
-			 array(
-				 'theme_location' => 'social',
-				 'menu_class'     => 'menu social-links-menu',
-				 'depth'          => 1,
-				 'container'      => '',
-			 )
+			wp_nav_menu(
+				array(
+					'theme_location' => 'social',
+					'menu_class'     => 'menu menu--social-links',
+					'depth'          => 1,
+					'container'      => '',
+				)
 			);
 		?>
 	</nav>
