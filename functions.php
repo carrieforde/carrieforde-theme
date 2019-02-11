@@ -157,7 +157,7 @@ if ( ! function_exists( 'carrieforde_setup' ) ) :
 		add_editor_style( str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Inconsolata|Karla' ) );
 
 		// Enqueue editor styles.
-		add_editor_style( 'dist/admin.css' );
+		add_editor_style( 'dist/editor.css' );
 	}
 endif;
 
@@ -269,7 +269,7 @@ function carrieforde_block_editor_styles() {
 	// Admin styles.
 	wp_enqueue_style(
 		'carrieforde-style',
-		CARRIEFORDE_URL . 'dist/admin.css',
+		CARRIEFORDE_URL . 'dist/editor.css',
 		array(),
 		CARRIEFORDE_VERSION
 	);

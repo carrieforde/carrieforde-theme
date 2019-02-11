@@ -8,10 +8,10 @@ const webpack = require('webpack'),
 const config = {
   context: __dirname,
   entry: {
-    frontend: './src/index.js',
+    frontend: ['./src/index.js', './src/sass/main.scss'],
     customizer: './src/customizer.js',
     admin: './src/admin.js',
-    blocks: './src/blocks.js'
+    editor: ['./src/editor.js', './src/sass/editor.scss']
   },
   output: {
     path: path.join(__dirname, 'dist'),
